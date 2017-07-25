@@ -1,5 +1,8 @@
 // 1st Scenario "All numbers"
 // node addAllTheThings.js 10 20 5.5
+function toNum(potentialNumber) {
+    return isNaN(potentialNumber) ? 0 : Number(potentialNumber);
+}
 
 function run(input) {
 // background
@@ -23,4 +26,5 @@ if (process.env.NODE_ENV === 'test') {
     console.log(run([10, -10, 0]) === 0 ? 'PASS' : 'FAIL');
     console.log("Test 2 - Non number input");
     console.log(run([10, 'f', 'foo', 0]) === 0 ? 'PASS' : 'FAIL');
+    console.log(run(['10', '20']) === 30 ? 'PASS' : 'FAIL');
 }
